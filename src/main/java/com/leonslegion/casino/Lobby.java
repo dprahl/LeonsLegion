@@ -6,7 +6,6 @@ import com.leonslegion.casino.CardGamePackage.PokerGame;
 import com.leonslegion.casino.CardGamePackage.WarGame;
 import com.leonslegion.casino.RoulettePackage.RouletteGameManager;
 import com.leonslegion.casino.SlotPackage.SlotGame;
-import org.apache.commons.lang3.*;
 import org.apache.commons.lang3.math.NumberUtils;
 
 /**
@@ -35,10 +34,9 @@ public class Lobby {
             Console.println("------------------------------------------------");
             Console.println("~~~~~~~~~~~~~~~~~ Casino Lobby ~~~~~~~~~~~~~~~~~");
             Console.println("------------------------------------------(Q)uit");
-
+            // if action selected is not "exit", loop will re-iterate
             actionSelection();
         }
-
         Console.println("\nThanks for playing!  Have a nice day! \n");
     }
 
@@ -166,7 +164,6 @@ public class Lobby {
 
             default:
                 Console.println("We do not currently offer " + selectedGame + ", please make another selection.");
-                // selectGame(); // recursive method call, dangerous
         }
     }
 
